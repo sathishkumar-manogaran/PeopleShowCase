@@ -1,0 +1,39 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /people/api
+spring:
+  application:
+    name: PeopleShowCase
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+    url: jdbc:mysql://localhost:3306/people_showcase?useSSL=false&allowPublicKeyRetrieval=true&sessionVariables=sql_mode=''
+    username: root
+    password: root
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      naming:
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        generate_statistics: false
+      javax:
+        persistence:
+          sharedCache:
+            mode: ALL
+    show-sql: true
+
+liquibase:
+  # schema should already exists on DB => use PUBLIC schema for H2
+  default-schema: people_showcase
+

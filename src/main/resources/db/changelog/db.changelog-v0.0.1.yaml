@@ -1,0 +1,6 @@
+databaseChangeLog:
+  # NOT USED because of liquibase 3.5.3 bug on includeAll
+  #  - includeAll:
+  #      path: db/changelog/version/0.0.1/
+  - include:
+      file: db/changelog/version/0.0.1/01_create_table_people_showcase.yaml

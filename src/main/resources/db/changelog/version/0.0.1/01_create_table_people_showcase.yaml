@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: satz
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  type: INTEGER
+              - column:
+                  name: name
+                  type: UUID
+              - column:
+                  name: from
+                  type: VARCHAR(100)
+              - column:
+                  name: interests
+                  type: VARCHAR(100)
+            tableName: people_showcase

@@ -1,0 +1,2 @@
+id;team_id;set_id;content;is_active;dte_creation;created_by;dte_update;updated_by
+0138f130-dfd4-4cb5-ac5a-0de18a947bb0;5e99b76d-c889-473a-9459-0e5fdd396e99;deb22dc9-b173-4bf3-815a-559eb6d127d5;{"hello":"world","foo":"bar","count":123};true;2017-04-04T11:15:00;ltiehi;2017-04-04T11:15:00;satz
